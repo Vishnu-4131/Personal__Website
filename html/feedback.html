@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/feedback.css">
+    <script src="../javascript/script.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div ><a href="../index.html"><img src="../images/logo.jpeg" width="50px" class="logo-image"></a><span class="logo">Vishnu</span></div>
+            <ul class="links">
+                <li class="one"><a href="../index.html">Home</a></li>
+                <li class="one"><a href="about.html">About Me</a></li>
+                <li class="one"><a href="profile.html">Profile</a></li>
+                <li class="one"><a href="interest.html">Interests</a></li>
+                <li class="one"><a href="calender.html">Calender</a></li>
+                <li class="one"><a href="location.html">Location</a></li>
+                <li class="one"><a href="contact.html">Contact Us</a></li>
+                <li class="one" style="padding-right: 10px;"><a class="one1"href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"  id="o_btn"></i>
+                <i class="fa-solid fa-xmark"  id="x_btn"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu " id="drop_dwn">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="interest.html">Interests</a></li>
+            <li><a href="calender.html">Calender</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a class="one1"href="feedback.html">Feedback</a></li>
+        </div>
+        <script>
+                
+        </script>
+    </header>
+
+<div class="feedback-form">
+    <span class="heading">FEEDBACK</span>
+    <form id="feedbackForm">
+
+        <!-- Name -->
+         <section>
+        <div class="input-group">
+            <label for="name">Name:*</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+            <div id="error-name" class="error-message"></div>
+        </div></section>
+
+        <!-- Email -->
+         <section>
+        <div class="input-group">
+            <label for="email">Email (optional):</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email (optional)">
+            <div id="error-email" class="error-message"></div>
+        </div></section>
+
+        <!-- Age Group -->
+        <section>
+        <div class="input-group">
+            <label for="ageGroup">Age Group:*</label>
+            <select id="ageGroup" name="ageGroup">
+                <option value="">Select Age Group</option>
+                <option value="Under 18">Under 18</option>
+                <option value="18-24">18-24</option>
+                <option value="25-34">25-34</option>
+                <option value="35-44">35-44</option>
+                <option value="45-54">45-54</option>
+                <option value="55+">55+</option>
+            </select>
+            <div id="error-ageGroup" class="error-message"></div>
+        </div></section>
+
+        <!-- Occupation -->
+         <section>
+        <div class="input-group">
+            <label for="occupation">Occupation:*</label>
+            <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation">
+            <div id="error-occupation" class="error-message"></div>
+        </div></section>
+
+        <!-- How did you find the website -->
+         <section>
+        <div class="input-group">
+            <label for="findWebsite">How did you find the website?*</label>
+            <input type="text" id="findWebsite" name="findWebsite" placeholder="How did you find our website?">
+            <div id="error-findWebsite" class="error-message"></div>
+        </div></section>
+
+        <!-- Purpose of visit -->
+        <section>
+        <div class="input-group">
+            <label for="purpose">Purpose of visit:*</label>
+            <input type="text" id="purpose" name="purpose" placeholder="Purpose of your visit">
+            <div id="error-purpose" class="error-message"></div>
+        </div></section>
+
+        <!-- Frequency of visits -->
+        <section>
+        <div class="input-group">
+            <label for="frequency">Frequency of visits:*</label>
+            <select id="frequency" name="frequency">
+                <option value="">Select Frequency</option>
+                <option value="First time">First time</option>
+                <option value="Occasionally">Occasionally</option>
+                <option value="Regularly">Regularly</option>
+            </select>
+            <div id="error-frequency" class="error-message"></div>
+        </div></section>
+
+        <!-- Overall Design Rating -->
+        <section>
+        <label>Rate overall design:</label>
+        <div class="stars" id="design-stars">
+            <i class="fa-solid fa-star" data-value="1"></i>
+            <i class="fa-solid fa-star" data-value="2"></i>
+            <i class="fa-solid fa-star" data-value="3"></i>
+            <i class="fa-solid fa-star" data-value="4"></i>
+            <i class="fa-solid fa-star" data-value="5"></i>
+        </div>
+        <input type="hidden" id="design" name="design">
+        <div id="error-design" class="error-message"></div></section>
+
+        <!-- Content Quality Rating -->
+        <section>
+        <label>Rate content quality:</label>
+        <div class="stars" id="content-stars">
+            <i class="fa-solid fa-star" data-value="1"></i>
+            <i class="fa-solid fa-star" data-value="2"></i>
+            <i class="fa-solid fa-star" data-value="3"></i>
+            <i class="fa-solid fa-star" data-value="4"></i>
+            <i class="fa-solid fa-star" data-value="5"></i>
+        </div>
+        <input type="hidden" id="content" name="content">
+        <div id="error-content" class="error-message"></div></section>
+
+        <!-- Navigation Ease -->
+        <section>
+        <div class="input-group">
+            <label for="navigationEase">Was the navigation easy?*</label>
+            <select id="navigationEase" name="navigationEase">
+                <option value="">Select Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <div id="error-navigationEase" class="error-message"></div>
+        </div></section>
+
+        <!-- Page Speed Experience -->
+        <section>
+        <div class="input-group">
+            <label for="pageSpeed">Page speed experience:*</label>
+            <select id="pageSpeed" name="pageSpeed">
+                <option value="">Select Experience</option>
+                <option value="Fast">Fast</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Slow">Slow</option>
+            </select>
+            <div id="error-pageSpeed" class="error-message"></div>
+        </div></section>
+
+        <!-- Mobile Responsiveness -->
+        <section>
+        <label>Rate mobile responsiveness:</label>
+        <div class="stars" id="mobile-stars">
+            <i class="fa-solid fa-star" data-value="1"></i>
+            <i class="fa-solid fa-star" data-value="2"></i>
+            <i class="fa-solid fa-star" data-value="3"></i>
+            <i class="fa-solid fa-star" data-value="4"></i>
+            <i class="fa-solid fa-star" data-value="5"></i>
+        </div>
+        <input type="hidden" id="mobile" name="mobile">
+        <div id="error-mobile" class="error-message"></div></section>
+
+        <!-- Clarity of Information -->
+        <section>
+        <label>Rate clarity of information:</label>
+        <div class="stars" id="clarity-stars">
+            <i class="fa-solid fa-star" data-value="1"></i>
+            <i class="fa-solid fa-star" data-value="2"></i>
+            <i class="fa-solid fa-star" data-value="3"></i>
+            <i class="fa-solid fa-star" data-value="4"></i>
+            <i class="fa-solid fa-star" data-value="5"></i>
+        </div>
+        <input type="hidden" id="clarity" name="clarity">
+        <div id="error-clarity" class="error-message"></div></section>
+
+        <!-- Did you find what you were looking for -->
+        <section>
+        <div class="input-group">
+            <label for="findWhat">Did you find what you were looking for?*</label>
+            <select id="findWhat" name="findWhat">
+                <option value="">Select Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <div id="error-findWhat" class="error-message"></div>
+        </div></section>
+
+        <!-- Feature liked the most -->
+        <section>
+        <div class="input-group">
+            <label for="likedFeature">What feature did you like the most?*</label>
+            <input type="text" id="likedFeature" name="likedFeature" placeholder="Feature you liked the most">
+            <div id="error-likedFeature" class="error-message"></div>
+        </div></section>
+
+        <!-- What would you improve -->
+        <section>
+        <div class="input-group">
+            <label for="improveFeature">What would you improve?*</label>
+            <input type="text" id="improveFeature" name="improveFeature" placeholder="What would you improve?">
+            <div id="error-improveFeature" class="error-message"></div>
+        </div></section>
+
+        <!-- Bugs or Issues -->
+        <section>
+        <div class="input-group">
+            <label for="bugsIssues">Any bugs or issues noticed?</label>
+            <textarea id="bugsIssues" name="bugsIssues" placeholder="Any bugs or issues noticed?"></textarea>
+            <div id="error-bugsIssues" class="error-message"></div>
+        </div></section>
+
+        <!-- Additional suggestions or comments -->
+        <section>
+        <div class="input-group">
+            <label for="comments">Additional suggestions or comments:*</label>
+            <textarea id="comments" name="comments" placeholder="Any other comments..."></textarea>
+            <div id="error-comments" class="error-message"></div>
+        </div></section>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Feedback</button>
+    </form>
+</div>
+</body>
+</html>

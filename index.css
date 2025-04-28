@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    
+}
+.logo-image{
+    border-radius: 15px;
+}
+
+
+.space-grotesk{
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+body{
+    background: linear-gradient(to right,rgba(1, 1, 68, 0.938),rgb(0, 0, 3));
+
+}
+.one1{
+    color: cyan;
+    border-bottom: 2px solid white;
+    text-shadow: 0 0 5px cyan,0 0 25px cyan;
+}
+.logo{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    font-weight: bold;
+    
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    transition-property: border;
+    transition-duration: 1s;
+    display: inline;
+    text-transform: uppercase;
+    font-weight: bold
+}
+li::after{
+content: ' ';
+height: 2px;
+width: 0;
+background-color: white;
+display: block;
+color: cyan;
+text-shadow: 0 0 5px cyan,0 0 25px cyan,0 0 50px cyan;
+transition: .2s ease-in-out;
+}
+.one:hover::after{
+    width: 100%;
+    
+}
+a:hover{
+    color: cyan;
+    text-shadow: 0 0 5px cyan,0 0 25px cyan,0 0 50px cyan;
+    transition: .2s;
+    font-weight: bold;
+}
+
+header{
+    position: relative;
+    
+    border-bottom: 2px solid black;
+    background-color: black;
+    
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+}
+.navbar .logo a{
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar .links{
+    display: flex;
+    gap: 24px;
+}
+ .navbar .toggle_btn{
+    color:cyan;
+    
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+.toggle_btn .fa-xmark{
+    display: none;
+}
+.dropdown_menu{
+    display: none;
+}
+
+/*drop down menu*/
+
+.dropdown_menu{
+    
+    position: absolute;
+    top: 60px;
+    right: 24px;
+    height: 0;
+    width: 300px;
+    background: rgb(0, 0, 3);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.dropdown_menu li{
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+.dropdown_menu:hover{
+    background-color: black;
+    height: 320px;
+    border-radius: 15px;
+    transition: .1s;
+}
+.dropdown_menu li:hover{
+    background:rgb(54, 54, 56) ;
+    transition: 0.5s ease;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+#about{
+    position:relative;
+    top: 25%;
+}
+
+.logo1{
+    width: 90%;
+    margin: 3%;
+    padding: 2%;
+   
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    padding-top: 15%;
+    
+}
+.photo{
+    width: 70%;
+    border-radius: 50%;
+    margin: 4%;
+    transition: .3s;
+}
+.photo:hover{
+    box-shadow: 0 0 5px cyan,0 0 25px cyan,0 0 50px cyan;
+    transition: .3s;
+}
+
+.text{
+    font-size: 50px;
+    font-weight: 600;
+    display: block;
+    margin-left:15% ;
+
+} 
+.image{
+    border-bottom-left-radius: 140px;
+    border-bottom-right-radius: 140px;
+    width: 50%;
+    transition: .3s
+}
+.my-photo {
+    margin: 5%;
+    width: 100%;
+    background: black;
+    border-radius: 50%;
+}
+.my-photo:hover {
+    box-shadow: 0 0 5px cyan,0 0 25px cyan,0 0 50px cyan;
+
+}
+.image:hover{
+    margin-top: -50px;
+    transform: scale(1.1);
+    transition: .3s;
+} 
+.Web{
+    color: cyan; 
+}
+.Web:hover{
+    text-shadow: 0 0 5px cyan,0 0 25px cyan,0 0 50px cyan;
+}
+.welcome{
+    margin-left:15% ;
+    font-size: 25px; 
+}      
+
+
+.fa-brands{
+    font-size: 40px;
+    margin: 3%;
+    display: inline-block;
+    color: cyan;
+    
+}
+.fa-whatsapp:hover{
+    color: cyan;
+    transition: .5s;
+    text-shadow: 0 0 5px cyan,0 0 25px cyan,0 0 50px cyan;
+    transition: .3s;
+    transform: scale(1.4);
+}
+.fa-whatsapp:active{
+    color: green;
+    transition: .5s;
+    text-shadow: 0 0 5px green, 0 0 25px green;
+}
+.fa-instagram:hover{
+    text-shadow: 0 0 5px cyan,0 0 25px cyan,0 0 50px cyan;
+    transition: .5s;
+    transform: scale(1.4);
+}
+.fa-instagram:active{
+    color:white;
+    background: radial-gradient(circle at 30% 107%,#fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90% );
+    text-shadow: 0 0 5px rgb(245, 12, 63),0 0 25px rgb(245, 12, 63);
+    transition: .5s;
+    border-radius: 25px;
+}
+.fa-twitter:hover{
+    color: cyan;
+    transition: .5s;
+    text-shadow: 0 0 5px cyan,0 0 25px cyan,0 0 50px cyan;
+    transform: scale(1.4);
+}
+.fa-twitter:active{
+    color: rgb(10, 188, 247);
+    text-shadow: 0 0 5px rgb(10, 188, 247), 0 0 25px rgb(10, 188, 247);
+    transition: .5s;
+}
+.ul{
+    margin-left: 15%;
+    margin-top: 3%;
+    display: inline-block;
+}
+.l{
+    display: inline-block;
+    padding-right: 20px;
+
+}
+.toggle_btn:hover{
+    text-shadow: 0 0 5px cyan,0 0 25px cyan,0 0 50px cyan;
+}
+@media(max-width:1050px){
+    
+    .navbar .links{
+        display: none;
+    }
+.navbar .toggle_btn{  
+    display: block;
+    margin-top: -20px;
+
+}
+.dropdown_menu{
+    display: block;
+}}
+@media(max-width:768px){
+    
+    .toggle_btn{
+        font-size:50px ;
+        padding-top: 15px;
+        padding-right: 15px;
+    }
+    .my-photo{
+        width: 80%;
+        height: 500px;
+    }
+    .image{
+        width: 100%;
+        
+    }
+
+}
+
+@media(max-width:600px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .logo1{
+        width: 90%;
+    }
+    .text {
+        font-size:30px;
+        font-weight: 800;
+        margin-left: 5%;
+        margin-top: -20px;
+    }
+    p{
+        margin-left: 5%;
+        font-size: 20px;
+    }
+    .dropdown_menu{
+    
+        width: 150px;
+        
+    }
+    .toggle_btn{
+        padding-right: 20px;
+        padding-top: 10px;
+    }
+    .logo{
+        font-size: 30px;
+        padding-top: 10px;
+        font-weight: bold;
+    }
+    .logo-image{
+        width: 40px;
+        margin-top: 0;
+        margin-left: 0;
+        margin-left: 10px;
+
+    }
+    .fa-brands{
+        font-size: 40px;
+        margin: 3%;
+        display: inline-block;
+    }
+    .fa-whatsapp{
+        margin-left:-20px;
+        
+    }
+    .welcome{
+        margin-left: 5%;
+    }
+    .image{
+        width: 80%;
+    }
+    .my-photo{
+        width: 80%;
+
+    }
+}
